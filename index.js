@@ -1,15 +1,11 @@
-var express = require('express');
-var app = express();
+const express = require("express");
 
-app.get('/', function (req, res) {
-    res.send('{ "response": "Hello From Thetips4you" }');
+const app = express();
+
+app.get("/", (req, res) => {
+  res.send("<h1>Hello World...</h1>");
 });
 
-app.get('/will', function (req, res) {
-    res.send('{ "response": "Hello World" }');
+app.listen(3000, () => {
+  console.log("App running on port 3000...");
 });
-app.get('/ready', function (req, res) {
-    res.send('{ "response": " Great!, It works!" }');
-});
-app.listen(process.env.PORT || 3000);
-module.exports = app;
